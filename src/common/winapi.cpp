@@ -1,9 +1,7 @@
-// Copyright (c) Athena Dev Teams - Licensed under GNU GPL
+// Copyright (c) rAthena Dev Teams - Licensed under GNU GPL
 // For more information, see LICENCE in the main folder
 
 #include "winapi.hpp"
-
-#include "cbasetypes.h"
 
 // Taken from https://support.microsoft.com/de-de/help/118626/how-to-determine-whether-a-thread-is-running-in-user-context-of-local
 bool IsCurrentUserLocalAdministrator(void){
@@ -161,7 +159,7 @@ bool IsCurrentUserLocalAdministrator(void){
 		if (hToken) CloseHandle(hToken);
 	}
 
-	return fReturn;
+	return fReturn == TRUE;
 #else
 	return false;
 #endif

@@ -1,11 +1,11 @@
-// Copyright (c) Athena Dev Teams - Licensed under GNU GPL
+// Copyright (c) rAthena Dev Teams - Licensed under GNU GPL
 // For more information, see LICENCE in the main folder
 
-#ifndef _GUILD_HPP_
-#define _GUILD_HPP_
+#ifndef GUILD_HPP
+#define GUILD_HPP
 
-#include "../common/cbasetypes.h"
-#include "../common/mmo.h"
+#include "../common/cbasetypes.hpp"
+#include "../common/mmo.hpp"
 
 #include "map.hpp" // NAME_LENGTH
 
@@ -43,7 +43,7 @@ struct guild_castle* guild_mapindex2gc(short mapindex);
 
 struct map_session_data *guild_getavailablesd(struct guild *g);
 int guild_getindex(struct guild *g,uint32 account_id,uint32 char_id);
-int guild_getposition(struct guild *g, struct map_session_data *sd);
+int guild_getposition(struct map_session_data *sd);
 unsigned int guild_payexp(struct map_session_data *sd,unsigned int exp);
 int guild_getexp(struct map_session_data *sd,int exp); // [Celest]
 
@@ -118,4 +118,4 @@ void guild_retrieveitembound(uint32 char_id,uint32 account_id,int guild_id);
 
 void do_final_guild(void);
 
-#endif /* _GUILD_HPP_ */
+#endif /* GUILD_HPP */
